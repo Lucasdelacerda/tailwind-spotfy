@@ -1,32 +1,54 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipForward, SkipBackIcon, RepeatIcon, Mic2, LayoutListIcon, Laptop2, Volume, Maximize2 } from 'lucide-react'
+import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipForward, SkipBackIcon, RepeatIcon, Mic2, LayoutListIcon, Laptop2, Volume, Maximize2, Plus, Globe } from 'lucide-react'
 import Image from 'next/image'
 export default function Home() {
   return (
+    /** para resolver nesse código
+     * Para criar um carrossel horizontal que possa ser rolado com o scroll do mouse, você pode usar o overflow-x do CSS para permitir a rolagem horizontal dentro de uma div. Vou mostrar como você pode fazer isso usando Tailwind CSS.
+
+      Passos:
+Adicione overflow-x-auto à div contêiner para permitir a rolagem horizontal.
+Defina a largura mínima dos itens dentro da div para garantir que eles sejam maiores que a largura do contêiner pai, forçando a rolagem horizontal.
+Utilize estilos para garantir uma experiência de rolagem suave.
+
+     */
     <div className="h-screen flex flex-col">
       <div className="flex flex-1 ">
-        <aside className="w-72 bg-zinc-950 p-6">
+        <aside className="w-max bg-zinc-950 p-2 ">
 
-          <nav className='space-y-5'>
-            <a href="" className='flex items-center gap-3 text-sm  font-semibold text-zinc-200 '><Search /> Search</a>
-            <a href="" className='flex items-center gap-3 text-sm  font-semibold text-zinc-200 '><HomeIcon /> Home</a>
-            <a href="" className='flex items-center gap-3 text-sm  font-semibold text-zinc-200 '><Library />Your Library</a>
+          <nav className=' flex flex-col items-left gap-5 bg-zinc-900 p-5 rounded-md w-80'>
+
+            <a href="" className='flex items-center gap-3 text-1x1  font-semibold text-zinc-200 bg-color-700 rounded'>Spotify</a>
+            <a href="" className='flex items-center gap-3 text-1x1  font-semibold text-zinc-400 '><HomeIcon /> Início</a>
+            <a href="" className='flex items-center gap-3 text-1x1  font-semibold text-zinc-400 '><Search /> Procurar</a>
           </nav>
-          <nav className='mt-6  pt-6 border-t border-zinc-800 flex flex-col gap-3'>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>Hot hits Brasil  </a>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>Aniver Funk  </a>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>My Playlist  </a>
-            <a href='' className='text-sm text-zinc-400 hover:text-zinc-100'>Playlist  </a>
+          <nav className='flex flex-col items-left gap-5 bg-zinc-900 p-2 pr-2 rounded-md mt-2 h-full w-80'>
+            <a href="" className='flex items-center gap-3 text-1x1  font-semibold text-zinc-400 ml-3 mt-3'><Library />A tua Biblioteca <span className='ml-auto'> < Plus /> </span> </a>
+            <div className='flex flex-col gap-3 bg-zinc-800 p-4 rounded-md '>
+              <strong className='font-semibold text-3x1 text-zinc-200 '>Cria tua primeira playlist</strong>
+              <p className='text-xs text-zinc-200'>É fácil, nós ajudamos</p>
+              <a href="" className='rounded-full bg-white text-black p-2  pl-4 pr-4 font-bold mt-1 text-sm w-max' >Criar playlist</a>
+            </div>
+            <div className='flex flex-wrap gap-3 p-4'>
+              <a href="" className='text-zinc-400  text-xs'>Legal</a>
+              <a href="" className='text-zinc-400  text-xs'>Segurança e Centro de privacidade</a>
+              <a href="" className='text-zinc-400  text-xs'>Politica de privacidade</a>
+              <a href="" className='text-zinc-400  text-xs'>Cookies</a>
+              <a href="" className='text-zinc-400  text-xs'>Sobre anúncios</a>
+              <a href="" className='text-zinc-400  text-xs'>Acessibilidade</a>
 
+              <a href="" className='text-zinc-400  text-xs'>Cookies</a>
+            </div>
+            <span className=' flex flex-row rounded-full  gap-1 border-2 border-white text-white p-1 ml-4  pl-4 pr-4 font-bold mt-1 text-sm w-max'><Globe />Português</span>
           </nav>
         </aside>
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 ">
           <div className="flex items-center gap-4">
             <button className='  rounded-full bg-black/40 p-1'><ChevronLeft /></button>
             <button className='  rounded-full bg-black/40 p-1'><ChevronRight /></button>
           </div>
-          <h1 className="font-semibold text-3xl mt-10">Good Afternoon</h1>
+          <h1 className="font-semibold text-2xl mt-10">Artistas Populares</h1>
           <div className="grid grid-cols-3 gap-4 mt-4">
-            <a href='#' className='bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/1 0 transition-colors'>
+            <a href='#' className='bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/1 0 transition-colors w-max'>
               <Image src="/album.png" width={104} height={104} alt="capa do album" />
               <strong>Melting</strong>
               <button className='w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-green-400 text-black ml-auto mr-8 invisible group-hover:visible'>
@@ -69,12 +91,12 @@ export default function Home() {
               </button>
             </a>
           </div>
-          <h1 className="font-semibold text-2 xl mt-10">Made for Lucas de Lacerda</h1>
+          <h1 className="font-semibold text-2xl mt-10">Albuns Populares</h1>
           <div className="grid grid-cols-5 gap-4 mt-4">
             <a href='#' className='bg-white/5 rounded-md p-3 flex flex-col gap-2 hover:bg-white/10'>
               <Image src="/album.png" className="w-full" width={120} height={120} alt="capa do album" />
               <strong className='font-semibold'>Melting</strong>
-              <span className='text-sm text-zinc-400'>Mamamoo,Foo fighters</span>
+              <span className='text-sm text-zinc-400'>Mamamoo,Foo Fighters</span>
 
             </a>
             <a href='#' className='bg-white/5 rounded-md p-3 flex flex-col gap-2 hover:bg-white/10'>
@@ -106,7 +128,7 @@ export default function Home() {
 
         </main>
       </div>
-      <footer className="bg-zinc-800 border-t border-zinc-700  px-6 flex items-center justify-between position-fixed bottom-0 w-full p-3">
+      <footer className="bg-zinc-800 border-t border-zinc-700  px-6 flex items-center justify-between fixed bottom-0 w-full p-3">
         <div className='flex items-center gap-3'>
           <Image src="/album.png" className="w-full" width={56} height={56} alt="capa do album" />
           <div className='flex flex-col '>

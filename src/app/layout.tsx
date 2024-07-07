@@ -2,7 +2,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: "SpotFy",
+  title: "Spotify",
   description: "Listen to music ",
 };
 
