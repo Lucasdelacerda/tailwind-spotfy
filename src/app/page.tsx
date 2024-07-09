@@ -2,7 +2,14 @@ import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shu
 import Image from 'next/image'
 export default function Home() {
   return (
+/*
+colocar os hovers
+colocar o botão de vai e volta para funcionar
+colocar os aulbuns certinho
+colocar o top de registro e o aside como fixed
+colocar os mostrar mais para funcionar
 
+*/  
     <div className="h-screen flex flex-col">
       <div className="flex flex-1 ">
         <aside className="w-max bg-zinc-950 p-2 ">
@@ -104,38 +111,13 @@ export default function Home() {
             
           </div>
           <h1 className="font-semibold text-2xl mt-10">Albuns Populares</h1>
-          <div className="grid grid-cols-5 gap-4 mt-4">
-            <a href='#' className='bg-white/5 rounded-md p-3 flex flex-col gap-2 hover:bg-white/10'>
-              <Image src="/album.png" className="w-full" width={120} height={120} alt="capa do album" />
-              <strong className='font-semibold'>Melting</strong>
-              <span className='text-sm text-zinc-400'>Mamamoo,Foo Fighters</span>
+          <div className="grid grid-cols-5 gap-3 mt-4">
+            <a href='#' className=' rounded-md p-4 flex group flex-col gap-2'>
+              <Image src="/album.png" className="rounded" width={130} height={130} alt="capa do album" />
+              <strong className='text-zinc-300 font-normal'>Melting</strong>
+              <span className='text-sm text-zinc-400'>Mamamoo</span>
 
             </a>
-            <a href='#' className='bg-white/5 rounded-md p-3 flex flex-col gap-2 hover:bg-white/10'>
-              <Image src="/album.png" className="w-full" width={120} height={120} alt="capa do album" />
-              <strong className='font-semibold'>Melting</strong>
-              <span className='text-sm text-zinc-400'>Mamamoo,Foo fighters</span>
-
-            </a>
-            <a href='#' className='bg-white/5 rounded-md p-3 flex flex-col gap-2 hover:bg-white/10'>
-              <Image src="/album.png" className="w-full" width={120} height={120} alt="capa do album" />
-              <strong className='font-semibold'>Melting</strong>
-              <span className='text-sm text-zinc-400'>Mamamoo,Foo fighters</span>
-
-            </a>
-            <a href='#' className='bg-white/5 rounded-md p-3 flex flex-col gap-2 hover:bg-white/10'>
-              <Image src="/album.png" className="w-full" width={120} height={120} alt="capa do album" />
-              <strong className='font-semibold'>Melting</strong>
-              <span className='text-sm text-zinc-400'>Mamamoo,Foo fighters</span>
-
-            </a>
-            <a href='#' className='bg-white/5 rounded-md p-3 flex flex-col gap-2 hover:bg-white/10'>
-              <Image src="/album.png" className="w-full" width={120} height={120} alt="capa do album" />
-              <strong className='font-semibold'>Melting</strong>
-              <span className='text-sm text-zinc-400'>Mamamoo,Foo fighters</span>
-
-            </a>
-
           </div>
 
         </main>
